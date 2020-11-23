@@ -1,0 +1,11 @@
+{
+  "name": "birthday-reminder",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "web:start": "yarn workspace @birthday-reminder/web start",
+    "web:build": "yarn workspace @birthday-reminder/web build"
+  }
+}
