@@ -1,59 +1,57 @@
-import { faCoffee, faSave } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';
-import Input from '../../components/Input';
-import Separator from '../../components/Separator';
 
 function Home() {
   return (
-    <div
-      className="p-4 flex flex-col"
-      style={{
-        maxWidth: 400,
-      }}
-    >
-      <div className="flex flex-col">
-        <h1>Buttons</h1>
+    <div className="h-full mx-4">
+      <header className="flex justify-between items-center border-b mb-4">
+        <h1 className="text-xl">BDay Reminder</h1>
 
-        <Separator />
-
-        <div>
-          <Button>Click me</Button>
-        </div>
-
-        <div className="mt-2">
-          <Button variant="secondary">Click me</Button>
-        </div>
-
-        <div className="mt-2">
-          <Button variant="secondary" rightIcon={faCoffee}>
-            Click me
+        <nav>
+          <Button variant="link" className="mr-2">
+            Sign Up
           </Button>
+          <Button variant="link">Sign In</Button>
+        </nav>
+      </header>
+
+      <main className="grid gap-4 grid-cols-12">
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          1
         </div>
-
-        <div className="mt-2">
-          <Button leftIcon={faSave}>Click me</Button>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          2
         </div>
-
-        <div className="mt-2">
-          <Button rightIcon={faSave}>Click me</Button>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          3
         </div>
-      </div>
-
-      <div className="mt-2">
-        <h1>Inputs</h1>
-
-        <Separator />
-
-        <Input label="Email" defaultValue="519backes@gmail.com" />
-
-        <Input label="Email" />
-
-        <Input
-          label="Email"
-          value="519.comcccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
-          error="Email inválido"
-        />
-      </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          4
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          5
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          6
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          7
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          8
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          9
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          10
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          11
+        </div>
+        <div className="bg-indigo-500 rounded flex justify-center items-center h-10">
+          12
+        </div>
+      </main>
     </div>
   );
 }

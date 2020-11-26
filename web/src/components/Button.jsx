@@ -10,12 +10,13 @@ function Button(props) {
       // eslint-disable-next-line react/button-has-type
       type={type}
       className={cls([
-        'focus:outline-none',
+        'focus:outline-none transition p-2 rounded font-semibold',
         {
-          'bg-red-600 hover:bg-red-500 active:bg-red-700 text-white p-2 rounded font-semibold uppercase':
+          'bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white uppercase':
             variant === 'primary',
-          'bg-red-200 hover:bg-red-100 active:bg-red-300 text-red-600 p-2 rounded font-semibold focus:border-yellow-900':
+          'bg-indigo-200 hover:bg-indigo-300 active:bg-indigo-400 text-indigo-700':
             variant === 'secondary',
+          'text-indigo-700 active:text-indigo-900': variant === 'link',
         },
         className,
       ])}

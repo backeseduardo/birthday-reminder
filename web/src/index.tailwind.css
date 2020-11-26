@@ -1,3 +1,10 @@
 @tailwind base;
+
+html,
+body,
+#root {
+  @apply h-full;
+}
+
 @tailwind components;
 @tailwind utilities;

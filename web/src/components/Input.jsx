@@ -13,7 +13,7 @@ function Input(props) {
       <div className="relative flex flex-row items-center">
         <input
           className={cls([
-            'border-2 rounded p-2 w-full',
+            'transition border-2 rounded p-2 w-full',
             'focus:outline-none focus:border-gray-700',
             {
               'border-red-400 text-red-700 pr-7 focus:border-red-700': !!error,
