@@ -33,7 +33,7 @@ function Button(props) {
 Button.propTypes = {
   children: PropTypes.elementType,
   type: PropTypes.string,
-  variant: PropTypes.oneOf(['primary', 'secondary']),
+  variant: PropTypes.oneOf(['primary', 'secondary', 'link']),
   className: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   leftIcon: PropTypes.any,

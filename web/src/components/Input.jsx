@@ -4,17 +4,25 @@ import cls from 'class-names';
 import PropTypes from 'prop-types';
 
 function Input(props) {
-  const { label, defaultValue, value, onChange, error } = props;
+  const {
+    label,
+    name,
+    defaultValue,
+    value,
+    onChange,
+    error,
+    placeholder,
+  } = props;
 
   return (
     <div className="flex flex-col my-2">
-      {label && <span className="mb-1">{label}</span>}
+      {label && <span className="mb-1 ml-2">{label}</span>}
 
       <div className="relative flex flex-row items-center">
         <input
           className={cls([
             'transition border-2 rounded p-2 w-full',
-            'focus:outline-none focus:border-gray-700',
+            'focus:outline-none focus:border-indigo-700',
             {
               'border-red-400 text-red-700 pr-7 focus:border-red-700': !!error,
             },
@@ -22,6 +30,8 @@ function Input(props) {
           defaultValue={defaultValue}
           value={value}
           onChange={onChange}
+          name={name}
+          placeholder={placeholder}
         />
 
         {error && (
@@ -39,6 +49,7 @@ function Input(props) {
 
 Input.propTypes = {
   label: PropTypes.string,
+  name: PropTypes.string.isRequired,
   defaultValue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
@@ -51,6 +62,7 @@ Input.propTypes = {
   ]),
   onChange: PropTypes.func,
   error: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -59,6 +71,7 @@ Input.defaultProps = {
   value: undefined,
   onChange: () => {},
   error: undefined,
+  placeholder: undefined,
 };
 
 export default Input;
