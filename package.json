@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "workspaces": ["server", "web"],
+  "workspaces": [
+    "server",
+    "web"
+  ],
   "scripts": {
     "web:start": "yarn workspace @birthday-reminder/web start",
-    "web:build": "yarn workspace @birthday-reminder/web build"
+    "web:build": "yarn workspace @birthday-reminder/web build",
+    "server:start": "yarn workspace @birthday-reminder/server start",
+    "server:build": "yarn workspace @birthday-reminder/server build",
+    "server:test": "yarn workspace @birthday-reminder/server test"
   }
 }
