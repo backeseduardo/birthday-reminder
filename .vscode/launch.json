@@ -10,6 +10,21 @@
       "name": "Launch Chrome",
       "url": "http://localhost:3000",
       "webRoot": "${workspaceFolder}/web"
+    },
+    {
+      "type": "node",
+      "name": "Mocha (Test single file)",
+      "request": "launch",
+      "runtimeArgs": [
+        "${workspaceRoot}/server/node_modules/.bin/mocha",
+        "--require",
+        "ts-node/register/transpile-only",
+        "--inspect",
+        "${relativeFile}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "port": 9229
     }
   ]
 }
