@@ -6,7 +6,8 @@
   "scripts": {
     "start": "tsnd --respawn --debounce --transpile-only src/index.ts",
     "build": "tsc --build tsconfig.json",
-    "test": "mocha --require ts-node/register/transpile-only --recursive \"./test/**/*.spec.ts\" --watch-files test"
+    "test": "mocha --require ts-node/register/transpile-only --recursive \"./test/**/*.spec.ts\" --watch-files test",
+    "test:file": "mocha --require ts-node/register/transpile-only --inspect"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
