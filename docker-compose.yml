@@ -23,7 +23,7 @@ services:
     build: server
     container_name: br-server
     working_dir: /usr/src/app
-    command: yarn start
+    command: yarn dev
     depends_on:
       - postgres
     expose:

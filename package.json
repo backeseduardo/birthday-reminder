@@ -11,6 +11,7 @@
     "web:start": "yarn workspace @birthday-reminder/web start",
     "web:build": "yarn workspace @birthday-reminder/web build",
     "server:start": "yarn workspace @birthday-reminder/server start",
+    "server:dev": "yarn workspace @birthday-reminder/server dev",
     "server:build": "yarn workspace @birthday-reminder/server build",
     "server:test": "yarn workspace @birthday-reminder/server test"
   }

@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "tsnd --respawn --debounce --transpile-only src/index.ts",
+    "dev": "tsnd --respawn --debounce --transpile-only --inspect=0.0.0.0 -- src/index.ts",
     "build": "tsc --build tsconfig.json",
     "test": "mocha --require ts-node/register/transpile-only --recursive \"./test/**/*.spec.ts\" --watch-files test",
     "test:file": "mocha --require ts-node/register/transpile-only --inspect"
