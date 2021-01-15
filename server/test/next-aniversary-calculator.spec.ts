@@ -33,4 +33,19 @@ describe('NextAniversaryCalculator', () => {
 
     assert.deepStrictEqual(new Date(2022, 0, 7), nextAniversary);
   });
+
+  it('aniversary is today', () => {
+    const person = new Person('Person', new Date(1992, 0, 15));
+
+    const mockCalendar: ICalendar = {
+      now(): Date {
+        return new Date(2021, 0, 15);
+      },
+    };
+
+    const calculator = new NextAniversaryCalculator(mockCalendar);
+    const nextAniversary = calculator.exec(person);
+
+    assert.deepStrictEqual(new Date(2022, 0, 15), nextAniversary);
+  });
 });
